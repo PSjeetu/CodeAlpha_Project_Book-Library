@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+.book-list, .issued-books, .returned-books {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 5px auto;
+    width: 50%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+}
+
+ul li:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Colorful pop-up for author & summary */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 110%; /* Positioned below the book */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 1000; /* Ensures it stays above other elements */
+    text-align: left;
+    min-width: 250px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Show pop-up on hover */
+ul li:hover .tooltip {
+    display: block;
+}
+
+/* Colorful hover pop-up text with emojis */
+.tooltip span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tooltip .author {
+    color: #ffcc00;
+}
+
+.tooltip .summary {
+    color: #66ff99;
+}
+
+.issue-btn, .return-btn, .restore-btn {
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.issue-btn {
+    background-color: blue;
+    color: white;
+}
+
+.return-btn {
+    background-color: green;
+    color: white;
+}
+
+.restore-btn {
+    background-color: orange;
+    color: white;
+}
